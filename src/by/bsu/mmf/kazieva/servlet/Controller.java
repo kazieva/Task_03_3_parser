@@ -25,7 +25,7 @@ public class Controller extends HttpServlet {
 //    private static final Logger LOGGER = Logger.getLogger(Controller.class);
     private static final String FILE_NAME = "xml/vouchers.xml";
     private static final int FIRST_PAGE = 1;
-    private static final int RECORDS_PER_PAGE = 7;
+    private static final int RECORDS_PER_PAGE = 4;
     private static String action;
 
     public static String getAction() {
