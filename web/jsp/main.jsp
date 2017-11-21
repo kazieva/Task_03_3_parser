@@ -63,9 +63,9 @@
                 price
             </th>
         </tr>
-        <jsp:useBean id="touristVouchers" class="by.bsu.mmf.shevcova.servlet.entity.voucher.TouristVoucher"
+        <jsp:useBean id="touristVouchers" class="by.bsu.mmf.kazieva.servlet.entity.voucher.TouristVoucher"
                      scope="request" type="java.lang.Object"/>
-        <jsp:useBean id="hotel" class="by.bsu.mmf.shevcova.servlet.entity.voucher.Hotel"
+        <jsp:useBean id="hotel" class="by.bsu.mmf.kazieva.servlet.entity.voucher.Hotel"
                      scope="request" type="java.lang.Object"/>
         <c:forEach var="voucher" items="${requestScope.touristVouchers}">
             <jsp:setProperty name="voucher" property="country"/>
