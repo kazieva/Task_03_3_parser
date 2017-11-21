@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourist_vouchers  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.kazieva.example.com/students"
+                   xsi:schemaLocation="http://www.example.com/students ../xsd/vouchers.xsd">
+    <tourist_voucher country="Denmark" transport="Airliner">
+        <Type>holiday</Type>
+        <NumberDays>5</NumberDays>
+        <NumberNights>7</NumberNights>
+        <Hotel name="TheBest1" food="BB" TV="Yes">
+            <AmountOfStars>4</AmountOfStars>
+            <AmountOfRoom>2</AmountOfRoom>
+        </Hotel>
+        <Cost include="Pool">
+            <price>200</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="Japan" transport="Airliner">
+        <Type>excursion</Type>
+        <NumberDays>2</NumberDays>
+        <NumberNights>1</NumberNights>
+        <Hotel name="TheBest2" food="AL" TV="Yes" WiFi="Yes">
+            <AmountOfStars>3</AmountOfStars>
+            <AmountOfRoom>1</AmountOfRoom>
+        </Hotel>
+        <Cost include="SPA">
+            <price>300</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="France" transport="Railway">
+        <Type>recreation</Type>
+        <NumberDays>6</NumberDays>
+        <NumberNights>7</NumberNights>
+        <Hotel name="TheBest3" food="HB" AirConditioning="Yes">
+            <AmountOfStars>5</AmountOfStars>
+            <AmountOfRoom>3</AmountOfRoom>
+        </Hotel>
+        <Cost include="Pool">
+            <price>1300</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="South Korea" transport="Airliner">
+        <Type>recreation</Type>
+        <NumberDays>8</NumberDays>
+        <NumberNights>9</NumberNights>
+        <Hotel name="TheBest4" food="BB" AirConditioning="Yes" TV="No" WiFi="Yes">
+            <AmountOfStars>5</AmountOfStars>
+            <AmountOfRoom>3</AmountOfRoom>
+        </Hotel>
+        <Cost include="Pool">
+            <price>2000</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="Netherlands" transport="Liner">
+        <Type>pilgrimage</Type>
+        <NumberDays>3</NumberDays>
+        <NumberNights>2</NumberNights>
+        <Hotel name="TheBest5" food="AL">
+            <AmountOfStars>2</AmountOfStars>
+            <AmountOfRoom>1</AmountOfRoom>
+        </Hotel>
+        <Cost>
+            <price>400</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="Denmark" transport="Bus">
+        <Type>holiday</Type>
+        <NumberDays>5</NumberDays>
+        <NumberNights>6</NumberNights>
+        <Hotel name="TheBest6" food="No" AirConditioning="No" TV="No" WiFi="No">
+            <AmountOfStars>5</AmountOfStars>
+            <AmountOfRoom>2</AmountOfRoom>
+        </Hotel>
+        <Cost include="SPA">
+            <price>800</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="Bulgaria" transport="Railway">
+        <Type>excursion</Type>
+        <NumberDays>4</NumberDays>
+        <NumberNights>4</NumberNights>
+        <Hotel name="TheBest8" food="No" TV="Yes">
+            <AmountOfStars>3</AmountOfStars>
+            <AmountOfRoom>3</AmountOfRoom>
+        </Hotel>
+        <Cost>
+            <price>700</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="Japan" transport="Airliner">
+        <Type>holiday</Type>
+        <NumberDays>14</NumberDays>
+        <NumberNights>13</NumberNights>
+        <Hotel name="TheBest9" food="AL" WiFi="Yes" AirConditioning="Yes" TV="Yes">
+            <AmountOfStars>5</AmountOfStars>
+            <AmountOfRoom>3</AmountOfRoom>
+        </Hotel>
+        <Cost include="SPA">
+            <price>5000</price>
+        </Cost>
+    </tourist_voucher>
+    <tourist_voucher country="France" transport="Bus">
+        <Type>recreation</Type>
+        <NumberDays>5</NumberDays>
+        <NumberNights>5</NumberNights>
+        <Hotel name="TheBest10" food="BB">
+            <AmountOfStars>4</AmountOfStars>
+            <AmountOfRoom>3</AmountOfRoom>
+        </Hotel>
+        <Cost include="Pool">
+            <price>1000</price>
+        </Cost>
+    </tourist_voucher>
+</tourist_vouchers>

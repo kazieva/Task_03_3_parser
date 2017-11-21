@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.kazieva.example.com/students"
+        xmlns:tns="http://www.kazieva.example.com/students"
+        elementFormDefault="qualified">
+    <element name="tourist_vouchers">
+        <complexType>
+            <sequence>
+                <element name="tourist_voucher"
+                         type="tns:Tourist_voucher"
+                         minOccurs="2"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Tourist_voucher">
+        <sequence>
+            <element name="Type" type="tns:Type"/>
+            <element name="NumberDays" type="positiveInteger"/>
+            <element name="NumberNights" type="positiveInteger"/>
+            <element name="Hotel" type="tns:Hotel"/>
+            <element name="Cost" type="tns:Cost"/>
+        </sequence>
+        <attribute name="country" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="United Kingdom"/>
+                    <enumeration value="France"/>
+                    <enumeration value="Denmark"/>
+                    <enumeration value="Netherlands"/>
+                    <enumeration value="Lithuania"/>
+                    <enumeration value="Bulgaria"/>
+                    <enumeration value="China"/>
+                    <enumeration value="South Korea"/>
+                    <enumeration value="Japan"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="transport" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Airliner"/>
+                    <enumeration value="Railway"/>
+                    <enumeration value="Bus"/>
+                    <enumeration value="Liner"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <simpleType name="Type">
+        <restriction base="string">
+            <enumeration value="holiday"/>
+            <enumeration value="excursion"/>
+            <enumeration value="recreation"/>
+            <enumeration value="pilgrimage"/>
+        </restriction>
+    </simpleType>
+    <complexType name="Hotel">
+        <sequence>
+            <element name="AmountOfStars" type="tns:Stars"/>
+            <element name="AmountOfRoom" type="tns:HotelRoom"/>
+        </sequence>
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="[a-zA-Z0-9]{3,10}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="food" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="HB"/>
+                    <enumeration value="BB"/>
+                    <enumeration value="AL"/>
+                    <enumeration value="No"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="TV" use="optional">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Yes"/>
+                    <enumeration value="No"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="AirConditioning" use="optional">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Yes"/>
+                    <enumeration value="No"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="WiFi" use="optional">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Yes"/>
+                    <enumeration value="No"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <complexType name="Cost">
+        <sequence>
+            <element name="price" type="tns:Price"/>
+        </sequence>
+        <attribute name="include" use="optional">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="SPA"/>
+                    <enumeration value="Pool"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <simpleType name="Price">
+        <restriction base="string">
+            <pattern value="[0-9]{3,6}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Stars">
+        <restriction base="positiveInteger">
+            <pattern value="[1-5]"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="HotelRoom">
+        <restriction base="positiveInteger">
+            <pattern value="[1-3]"/>
+        </restriction>
+    </simpleType>
+</schema>
